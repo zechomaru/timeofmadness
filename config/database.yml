@@ -24,6 +24,6 @@ production:
     adapter: mysql2
     database: blog
     username: deploy
-    password: Compucredito1
+    password: password
     pool: 5
     timeout: 5000

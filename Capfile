@@ -14,15 +14,19 @@ require 'capistrano/deploy'
 #   https://github.com/capistrano/bundler
 #   https://github.com/capistrano/rails
 #
- require 'capistrano/rvm'
+
+require 'capistrano/rvm'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
-set :rvm_type, :user
- set :rvm_ruby_version, '2.0.0-0p0'
- require 'capistrano/bundler'
+require 'capistrano/bundler'
 require 'capistrano/rails'
-# require 'capistrano/rails/assets'
-# require 'capistrano/rails/migrations'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
 
+
+
+set :rvm_type, :user
+
+set :rvm_ruby_version, '2.2.0p0'
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
-Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
+Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }

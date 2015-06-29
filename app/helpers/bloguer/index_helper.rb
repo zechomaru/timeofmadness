@@ -1,0 +1,2 @@
+module Bloguer::IndexHelper
+end

@@ -1,0 +1,81 @@
+<div class="container-fluid" style="background-image: url('<%=@blog.background.url(:medium)%>');  background-repeat: no-repeat; background-size:cover; height: 400px">
+  <header>
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="nav_bloguer">
+          <ul>
+            <li><a href="<%= root_path %>">home</a></li>
+            <li><a href="#">Bloguers</a></li>
+            <li><a href="">Quieres ser un bloguer?</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row vertical-align">
+      <div class="col-md-4 text_center">
+        <%= image_tag @blog.avatar.url(:medium), class: "avatar" %>
+      </div>
+      <div class="col-md-8">
+        <h1 class="blog_text">
+          <%if @blog.text!=nil %>
+          <%= @blog.text%>
+              <%else%>
+                prueba
+          <%end%>
+        </h1>
+      </div>
+    </div>
+  </header>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- blog lateral izq -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8271065065744793"
+           data-ad-slot="7636622660"
+           data-ad-format="auto"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <!-- Destacados-->
+        <div class="col-md-12 blog_destacado">
+          <h2>Destacados</h2>
+        </div>
+      </div>
+      <!-- publicidad-->
+      <div class="row">
+        <div class="col-md-12">
+            publicidad
+        </div>
+      </div>
+      <!--post last -->
+    </div>
+    <div class="col-md-2">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- blog lateral der -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8271065065744793"
+           data-ad-slot="1590089061"
+           data-ad-format="auto"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+</div>
+
+<!-- footer-->
+<div class="container-fluid">
+  <footer>
+    <div class="row">
+
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,51 @@
+// Place all the styles related to the bloguers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.avatar{
+  border-radius: 50%;
+  width: 50%;
+  border: dashed 2px white;
+}
+.vertical-align{
+  display: flex;
+  align-items: center;
+}
+.nav_bloguer{
+  text-align: right;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+.nav_bloguer li{
+  display: inline-block;
+}
+.nav_bloguer li a{
+
+  font-size: 16px;
+  padding: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  text-shadow: rgba(45, 44, 48, 0.93) 2px 2px;
+  font-weight: bold;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all 0.5s;
+
+}
+.nav_bloguer li a:hover{
+  color: #ff8f05;
+}
+.blog_text{
+  padding: 80px;
+  color: white;
+  text-align: center;
+  text-shadow: black 1px 1px;
+  font-weight: bold;
+}
+.blog_destacado{
+  color: orange;
+  border-bottom: solid 2px rgb(77, 208, 225);
+}
+.blog_destacado h2{
+  font-weight: bold;
+}

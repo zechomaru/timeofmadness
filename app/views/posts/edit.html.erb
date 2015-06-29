@@ -1,0 +1,12 @@
+<% if current_bloguer.id == @post.bloguer_id %>
+    <%= form_for @post, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
+        <%= f.text_field :title %>
+        <%= f.text_area :body, :class => "froala-editor" %>
+        <%= f.submit "Create" %>
+    <% end %>
+
+<%else%>
+    <script>
+        window.location.href = "<%= posts_path%>";
+    </script>
+<%end%>

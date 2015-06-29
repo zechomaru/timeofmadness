@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'mysql2'
+
 gem 'capistrano', '~> 3.1.0'
 gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1.1'
@@ -10,7 +10,7 @@ gem "wysiwyg-rails"
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'font-awesome-sass'
-#gem 'sqlite3'
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -40,6 +40,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Add this if you're using rvm
 gem 'capistrano-rvm', github: "capistrano/rvm"
+group :production do
+  gem 'mysql2'
+end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

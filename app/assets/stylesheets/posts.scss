@@ -20,3 +20,60 @@
   font-weight: bold;
   font-size: 15px;
 }
+.froala-wrapper{
+  min-height: 500px;
+  height: auto;
+}
+.froala-view{
+  min-height: 500px;
+  height: auto;
+
+}
+.post_title{
+  width: 100%;
+  margin-bottom: 30px;
+  height: 30px;
+}
+
+/* home post*/
+.home_post_img{
+  width: 233px;
+  height: 170px;
+}
+.post{
+  padding: 0px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.post:before, .post:after{
+  content: "";
+  position: absolute;
+  z-index: -2;
+}
+.post:before{
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  height: 20%;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+.post:after{
+  bottom: 15px;
+  width: 50%;
+  height: 20%;
+  right: 10px;
+  left: auto;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+/*end post*/

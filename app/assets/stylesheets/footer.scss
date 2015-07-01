@@ -1,0 +1,26 @@
+/*foopter home*/
+.footer{
+  background-color: #1A1A1A;
+  min-height: 200px;
+  box-shadow: 0px -7px #3A3A3A;
+  margin-top: 100px;
+  padding-top: 30px;
+  color: white;
+}
+.footer_redes{
+  background-color: white;
+  padding: 7px;
+  border-radius: 50%;
+  font-size: 23px;
+  color: black;
+}
+.footer_redes i{
+  padding: 5px;
+}
+.footer_redes:hover{
+  background-color: #ffad16;
+  color: white;
+}
+.footer_title{
+  margin-bottom: 15px;
+}

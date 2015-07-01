@@ -1,0 +1,22 @@
+<div class="container-fluid post_bloguer">
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="post_nav">
+        <ul>
+          <li>
+            <%= link_to('home', root_path) %>
+          </li>
+          <% if bloguer_signed_in? %>
+              <li>
+                <%= link_to('Logout', destroy_bloguer_session_path, :method => :delete) %>
+              </li>
+          <% else %>
+              <li>
+                <%= link_to('Login', new_bloguer_session_path)  %>
+              </li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

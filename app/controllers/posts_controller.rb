@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_bloguer!
   def index
     @bloguer = current_bloguer.id
+    @bloguerp = Bloguer.where(id: @bloguer)
     @posts = Post.where(bloguer_id: @bloguer).order('id DESC')
   end
   def new

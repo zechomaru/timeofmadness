@@ -2,54 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*fonts*/
-@font-face {
-  font-family: 'orange_juiceregular';
-  src: url('/assets/orange_juice_2.0-webfont.eot');
-  src: url('/assets/orange_juice_2.0-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/assets/orange_juice_2.0-webfont.woff2') format('woff2'),
-  url('/assets/orange_juice_2.0-webfont.woff') format('woff'),
-  url('/assets/orange_juice_2.0-webfont.ttf') format('truetype'),
-  url('/assets/orange_juice_2.0-webfont.svg#orange_juiceregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-/*end fonts*/
 
-/*----HELPERS----*/
-.t1{
-  font-size: 65px;
-}
-.t2{
-  font-size: 40px;
-}
-.t3{
-  font-size: 50px;
-}
-.tfw{
-  font-weight: 600 !important;
-}
-.text_white{
-  color: white;
-}
-.text_red{
-  color: red;
-}
-.text_black{
-  color: black;
-}
-.text_orange{
-  color: #ff8f0c;
-}
-.text_center{
-  text-align: center;
-}
-.under_blue{
-  min-height: 1px;
-  border-bottom: solid 2px #4DD0E1;
-  margin-bottom: 20px;
-}
-/*--- END HELPERS --- */
 
 /* home perfil blogers*/
 .home_perfil{
@@ -58,49 +11,7 @@
 }
 
 /*end home perfil bloguers*/
-/* home post*/
-.home_post_img{
-  width: 233px;
-  height: 170px;
-}
-.post{
-  padding: 0px;
-  background-color: white;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
-}
-
-.post:before, .post:after{
-  content: "";
-  position: absolute;
-  z-index: -2;
-}
-.post:before{
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  height: 20%;
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-  -webkit-transform: rotate(-5deg);
-  -moz-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
-  -o-transform: rotate(-5deg);
-  transform: rotate(-5deg);
-}
-.post:after{
-  bottom: 15px;
-  width: 50%;
-  height: 20%;
-  right: 10px;
-  left: auto;
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-  -webkit-transform: rotate(5deg);
-  -moz-transform: rotate(5deg);
-  -ms-transform: rotate(5deg);
-  -o-transform: rotate(5deg);
-  transform: rotate(5deg);
-}
-/*end post*/
 .home_head{
   /*background: asset_url('fondo.png');
   background-repeat: no-repeat;
@@ -124,15 +35,23 @@
 .text_main strong{
   font-weight: 500;
 }
-/*foopter home*/
-.footer{
-  background-color: #181818;
-  min-height: 200px;
-  box-shadow: 0px -7px #3A3A3A;
-  margin-top: 100px;
-}
+
 .logo{
   width: 80px;
   margin-left: 67px;
   margin-top: 36px;
+}
+.nav_home{
+
+}
+.nav_home li{
+  display: inline-block;
+  padding: 10px;
+}
+.nav_home li a{
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: rgb(219, 250, 255) 1px 2px 9px;
 }

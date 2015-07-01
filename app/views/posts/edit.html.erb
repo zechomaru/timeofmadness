@@ -1,3 +1,4 @@
+<%= render "layouts/nav_blog_perfil" %>
 <% if current_bloguer.id == @post.bloguer_id %>
     <%= form_for @post, url: {action: "update"}, html: {class: "nifty_form"} do |f| %>
         <%= f.text_field :title %>

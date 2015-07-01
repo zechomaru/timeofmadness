@@ -4,10 +4,13 @@
       <%= image_tag("logo.png", class: "logo") %>
     </div>
     <div class="col-md-6">
-      <nav>
+      <nav class="nav_home">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <%= link_to("Bloguers", root_path) %>
+          </li>
+          <li>
+            <%= link_to("Quieres ser un Bloguer?", root_path) %>
           </li>
         </ul>
       </nav>
@@ -57,11 +60,17 @@
         <div class="under_blue"></div>
         <!--perfil bloguer  -->
         <div class="row text_center">
+          <% @bloguers.each do |bloguer| %>
         <div class="col-md-3">
           <div class="row">
+            <% if bloguer.avatar_file_name == nil %>
             <%= image_tag("perfil.jpg", class: "home_perfil") %>
+                <%else%>
+                <%= image_tag bloguer.avatar.url(:thumb), class: "home_perfil" %>
+                <%end%>
             <div class="row">
-              <h4>Perfil</h4>
+
+              <h4><%= bloguer.name %> <%= bloguer.lastname %></h4>
             </div>
             <div class="col-md-6">
               <strong>
@@ -75,60 +84,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="row">
-            <%= image_tag("perfil.jpg", class: "home_perfil") %>
-            <div class="row">
-              <h4>Perfil</h4>
-            </div>
-            <div class="col-md-6">
-              <strong>
-                S 11
-              </strong>
-            </div>
-            <div class="col-md-6">
-              <strong>
-                dedede
-              </strong>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="row">
-            <%= image_tag("perfil.jpg", class: "home_perfil") %>
-            <div class="row">
-              <h4>Perfil</h4>
-            </div>
-            <div class="col-md-6">
-              <strong>
-                S 11
-              </strong>
-            </div>
-            <div class="col-md-6">
-              <strong>
-                dedede
-              </strong>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="row">
-            <%= image_tag("perfil.jpg", class: "home_perfil") %>
-            <div class="row">
-              <h4>Perfil</h4>
-            </div>
-            <div class="col-md-6">
-              <strong>
-                S 11
-              </strong>
-            </div>
-            <div class="col-md-6">
-              <strong>
-                dedede
-              </strong>
-            </div>
-          </div>
-        </div>
+        <%end%>
         </div>
         <!--end perfil bloguer  -->
       </div>
@@ -178,16 +134,4 @@
     </div>
   </div>
 </div>
-
-<div class="container-fluid footer">
-  <footer>
-   <div class="row">
-     <div class="col-md-6">
-       
-     </div>
-     <div class="col-md-6">
-
-     </div>
-   </div>
-  </footer>
-</div>
+<%= render "layouts/footer" %>

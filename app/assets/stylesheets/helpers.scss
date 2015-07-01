@@ -1,0 +1,48 @@
+/*fonts*/
+@font-face {
+  font-family: 'orange_juiceregular';
+  src: url('/assets/orange_juice_2.0-webfont.eot');
+  src: url('/assets/orange_juice_2.0-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/orange_juice_2.0-webfont.woff2') format('woff2'),
+  url('/assets/orange_juice_2.0-webfont.woff') format('woff'),
+  url('/assets/orange_juice_2.0-webfont.ttf') format('truetype'),
+  url('/assets/orange_juice_2.0-webfont.svg#orange_juiceregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*end fonts*/
+
+/*----HELPERS----*/
+.t1{
+  font-size: 65px;
+}
+.t2{
+  font-size: 40px;
+}
+.t3{
+  font-size: 50px;
+}
+.tfw{
+  font-weight: 600 !important;
+}
+.text_white{
+  color: white;
+}
+.text_red{
+  color: red;
+}
+.text_black{
+  color: black;
+}
+.text_orange{
+  color: #ff8f0c;
+}
+.text_center{
+  text-align: center;
+}
+.under_blue{
+  min-height: 1px;
+  border-bottom: solid 2px #4DD0E1;
+  margin-bottom: 20px;
+}
+/*--- END HELPERS --- */

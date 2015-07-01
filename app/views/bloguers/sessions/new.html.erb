@@ -1,33 +1,33 @@
-<div class="container theme-showcase" role="main">
-
-  <div class="jumbotron">
-    <h2>Bienvenido</h2>
-
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
-          <%= f.label :Email %><br />
-          <%= f.email_field :email, autofocus: true %>
-        </div>
-        <br />
-        <div class="field">
-          <%= f.label :Contraseña %><br />
-          <%= f.password_field :password, autocomplete: "off" %>
-        </div>
-
-        <% if devise_mapping.rememberable? -%>
-            <div class="field">
-              <%= f.check_box :remember_me %>
-              <%= f.label :Recuerdame %>
-            </div>
-        <% end -%>
-
-        <div class="actions">
-          <%= f.submit "Iniciar Sección" %>
-        </div>
-    <% end %>
-
-    <%= render "bloguers/shared/links" %>
-
+<div class="container">
+  <div class="row">
+    <div class="Absolute-Center is-Responsive">
+      <div id="logo-container"></div>
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+          </div>
+          <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "password" %>
+          </div>
+          <div class="checkbox">
+            <label>
+              <% if devise_mapping.rememberable? -%>
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :Recuerdame %>
+              <% end -%>
+            </label>
+          </div>
+          <div class="form-group">
+            <%= f.submit "Iniciar Sección", class: "btn btn-def btn-block" %>
+          </div>
+          <div class="form-group text-center">
+            <%= render "bloguers/shared/links" %>
+          </div>
+        <%end%>
+      </div>
+    </div>
   </div>
-
 </div>

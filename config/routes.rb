@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :bloguers, controllers: {sessions: 'bloguers/sessions', registrations: 'bloguers/registrations'}
 
-root 'home#index'
+  root 'home#index'
   get 'quieres-ser-un-bloguer', to: 'getting#index', as: 'getting'
   get 'bloguers/:id', to: 'bloguers#show', as: 'bloguer'
   get 'bloguers', to: 'bloguers#index'

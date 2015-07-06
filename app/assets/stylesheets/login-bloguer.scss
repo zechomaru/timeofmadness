@@ -1,28 +1,8 @@
 #login{
-
+  background: asset_url('back.png');
+  background-color: #444;
+  background: asset_url('pinlayer2.png'),asset_url('pinlayer1.png'),asset_url('back.png');
 }
-
-div.well{
-  height: 250px;
-}
-
-.Absolute-Center {
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-}
-
-.Absolute-Center.is-Responsive {
-  width: 50%;
-  height: 50%;
-  min-width: 200px;
-  max-width: 400px;
-  padding: 40px;
-}
-
-#logo-container{
-  margin: auto;
-  margin-bottom: 10px;
-  width:200px;
-  height:30px;
+.vertical-offset-100{
+  padding-top:100px;
 }

@@ -5,3 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Config.create(facebook: 'https://www.facebook.com/timeofmadnessblog', twitter: 'test', youtube: 'test')

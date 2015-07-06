@@ -35,8 +35,11 @@
           <div class="froala-view">
             <h1><%= @post.title %></h1>
             <div class="fb-like" data-href="http://timeofmadnees.com/posts//<%= @post.id %>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-            <% str=@post.body %>
-            <%= CGI.unescapeHTML(str).html_safe %>
+            <%if @post.body.blank? %>
+                <%else%>
+                <% str=@post.body %>
+                <%= CGI.unescapeHTML(str).html_safe %>
+            <%end%>
           </div>
         </div>
         <div class="col-md-12">

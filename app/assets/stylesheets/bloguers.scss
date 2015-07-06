@@ -49,3 +49,16 @@
 .blog_destacado h2{
   font-weight: bold;
 }
+.fondo_bloguer{
+  background: asset_url('fondo.png');
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 400px
+}
+.redes_bloguer{
+  font-size: 20px;
+  color: #ffffff;
+}
+.redes_bloguer:hover{
+  color: orange;
+}

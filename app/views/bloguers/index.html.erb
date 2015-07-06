@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background-image: url('<%=@blog.background.url(:medium)%>');  background-repeat: no-repeat; background-size:cover; height: 400px">
+<div class="container-fluid">
   <header>
     <div class="row">
       <div class="col-md-12">
@@ -13,15 +13,11 @@
     </div>
     <div class="row vertical-align">
       <div class="col-md-4 text_center">
-        <%= image_tag @blog.avatar.url(:medium), class: "avatar" %>
+
       </div>
       <div class="col-md-8">
         <h1 class="blog_text">
-          <%if @blog.text!=nil %>
-          <%= @blog.text%>
-              <%else%>
-                prueba
-          <%end%>
+
         </h1>
       </div>
     </div>

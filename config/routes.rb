@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
+  get 'getting/index'
+
   devise_for :bloguers, controllers: {sessions: 'bloguers/sessions', registrations: 'bloguers/registrations'}
 
 root 'home#index'
-  get 'bloguer/:id' => 'bloguers#show'
-  get 'bloguers' => 'bloguers#index'
+  get 'quieres-ser-un-bloguer', to: 'getting#index', as: 'getting'
+  get 'bloguers/:id', to: 'bloguers#show', as: 'bloguer'
+  get 'bloguers', to: 'bloguers#index'
+  post 'posts/new', to: 'posts#image'
   #get 'post/:id' => 'posts#new'
   resources :posts
-  #resources :bloguersra
+  #resources :bloguers
   #namespace :bloguer, path: '/' do
 
     # Directs /admin/products/* to Admin::ProductsController

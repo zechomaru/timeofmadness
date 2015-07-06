@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @bloguers = Bloguer.order("RANDOM()").limit(4)
+    @bloguers = Bloguer.order("RANDOM()").limit(3)
     @posts = Post.all
   end
 end

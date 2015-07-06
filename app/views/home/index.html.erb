@@ -6,12 +6,25 @@
     <div class="col-md-6">
       <nav class="nav_home">
         <ul>
-          <li>
-            <%= link_to("Bloguers", root_path) %>
-          </li>
-          <li>
-            <%= link_to("Quieres ser un Bloguer?", root_path) %>
-          </li>
+          <% if bloguer_signed_in? %>
+              <li>
+                <%= link_to('Logout', destroy_bloguer_session_path, :method => :delete) %>
+              </li>
+              <li>
+                <%= link_to('Perfil', root_path)%>
+              </li>
+              <li>
+                <%= link_to('Mis Posts', posts_path) %>
+              </li>
+          <% else %>
+              <li>
+                <%= link_to('Login', new_bloguer_session_path)  %>
+              </li>
+              <li>
+                <%= link_to("Quieres ser un Bloguer?", getting_path) %>
+              </li>
+          <% end %>
+
         </ul>
       </nav>
     </div>
@@ -59,14 +72,14 @@
         </h2>
         <div class="under_blue"></div>
         <!--perfil bloguer  -->
-        <div class="row text_center">
+        <div class="row text_center" style="height: 160px">
           <% @bloguers.each do |bloguer| %>
         <div class="col-md-3">
           <div class="row">
             <% if bloguer.avatar_file_name == nil %>
-            <%= image_tag("perfil.jpg", class: "home_perfil") %>
+                <a href="<%= bloguer_path(bloguer) %>"><%= image_tag("perfil.jpg", class: "home_perfil") %></a>
                 <%else%>
-                <%= image_tag bloguer.avatar.url(:thumb), class: "home_perfil" %>
+                <a href="<%= bloguer_path(bloguer) %>"><%= image_tag bloguer.avatar.url(:thumb), class: "home_perfil" %></a>
                 <%end%>
             <div class="row">
 
@@ -74,17 +87,24 @@
             </div>
             <div class="col-md-6">
               <strong>
-                S 11
+
               </strong>
             </div>
             <div class="col-md-6">
               <strong>
-                dedede
+                <% %>
               </strong>
             </div>
           </div>
         </div>
         <%end%>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-12">
+                <a class="bloguer_view" href="<%= bloguers_path %>"><i class="fa fa-plus-circle"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
         <!--end perfil bloguer  -->
       </div>
@@ -96,26 +116,26 @@
         </h2>
         <div class="under_blue"></div>
         <div class="row text_center">
-        <div class="col-md-3 col-md-offset-1 post">
-          <%= image_tag("phone.jpg", class: "home_post_img") %>
+          <% @posts.each do |post| %>
+        <div class="col-md-3 col-md-offset-1 post" style="margin-bottom: 20px">
+          <a href="<%= post_path(post) %>">
+            <%= image_tag post.picture.url(:medium), class: "home_post_img" %>
+          </a>
           <div class="row">
             <h3>
-              Tutorial de android
+              <%= post.title %>
             </h3>
             <div class="col-md-6">
-              redes
+
             </div>
             <div class="col-md-6">
-              100 visto
+              <strong>
+                <%= post.view %> <i class="fa fa-eye"></i>
+              </strong>
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-md-offset-1 post">
-
-        </div>
-        <div class="col-md-3 col-md-offset-1 post">
-
-        </div>
+        <%end%>
       </div>
       </div>
     </div>

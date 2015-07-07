@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.bloguer_id = current_bloguer.id
     if @post.save
-      render :edit
+      redirect_to(@post)
     end
   end
 

@@ -44,8 +44,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    ads-rails (0.2.2)
-      rails (>= 4.0.0, < 4.3.0)
     arel (6.0.0)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
@@ -201,7 +199,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ads-rails
   byebug
   capistrano (~> 3.1.0)
   capistrano-bundler (~> 1.1.2)

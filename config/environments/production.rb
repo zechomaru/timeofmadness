@@ -79,19 +79,16 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :address => "smtp.zoho.com",
-      :port => 465,
-      :user_name => 'noreply@example.com',
-      :password => 'Compucredito1',
-      :authentication => :login,
-      :tls => true,
-      :ssl => true,
-      :enable_starttls_auto => true
+      address:                'smtp.zoho.com',
+      port:                      465,
+      user_name:              'noreply@timeofmadnees.com',
+      domain:                 'example.com',
+      password:               'Compucredito1',
+      authentication:         :plain,
+      ssl:                    true,
+      tls:                    true
   }
-  config.action_mailer.default_url_options = { host: 'timeofmadnees.com'}
-  config.action_mailer.raise_delivery_errors = true
-  # Send email in development mode.
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host:  'localhost:3000' }
 
 
 end

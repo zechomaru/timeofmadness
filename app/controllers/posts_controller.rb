@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.bloguer_id = current_bloguer.id
     if @post.save
-      redirect_to(@post)
+      redirect_to posts_url
     end
   end
 
@@ -38,17 +38,15 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      render :edit
-      #redirect_to(@post)
+      redirect_to(@post)
     else
 
     end
   end
   def destroy
-    post = Post.find(params[:id])
-    post.destroy
-    if post.destroy
-      redirect_to(@post)
+    @post = Post.find(params[:id])
+    if @post.destroy
+      redirect_to posts_url
     else
 
     end

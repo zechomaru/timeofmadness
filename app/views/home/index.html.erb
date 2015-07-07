@@ -73,7 +73,31 @@
         <div class="under_blue"></div>
         <!--perfil bloguer  -->
         <div class="row text_center" style="height: 160px">
+          <% @bloguers.each do |bloguer| %>
+        <div class="col-md-3">
+          <div class="row">
+            <% if bloguer.avatar.blank? %>
+                <a href="<%= bloguer_path(bloguer) %>"><%= image_tag("perfil.jpg", class: "home_perfil") %></a>
+                <%else%>
+                <a href="<%= bloguer_path(bloguer) %>"><%= image_tag bloguer.avatar.url(:thumb), class: "home_perfil" %></a>
+                <%end%>
+            <div class="row">
 
+              <h4><%= bloguer.name %> <%= bloguer.lastname %></h4>
+            </div>
+            <div class="col-md-6">
+              <strong>
+
+              </strong>
+            </div>
+            <div class="col-md-6">
+              <strong>
+                <% %>
+              </strong>
+            </div>
+          </div>
+        </div>
+        <%end%>
           <div class="col-md-3">
             <div class="row">
               <div class="col-md-12">

@@ -38,3 +38,5 @@ $('.froala-editor').editable({ inlineMode: false});
 ga('create', 'UA-62993698-1', 'auto');
 ga('send', 'pageview');
 
+
+(adsbygoogle = window.adsbygoogle || []).push({});

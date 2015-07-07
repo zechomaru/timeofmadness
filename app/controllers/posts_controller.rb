@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_bloguer!
+  before_action :authenticate_bloguer!, :except => [:show]
 
   def index
     bloguer = current_bloguer.id

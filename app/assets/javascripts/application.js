@@ -42,23 +42,10 @@ $('.froala-editor').editable({ inlineMode: false});
 ga('create', 'UA-62993698-1', 'auto');
 ga('send', 'pageview');
 
+
 // google adsense
-$(".adsbygoogle").each(function () { (adsbygoogle = window.adsbygoogle || []).push({}); });
+
 
 
 //facebook
-window.fbAsyncInit = function() {
-    FB.init({
-        appId      : '1031371466877255',
-        xfbml      : true,
-        version    : 'v2.3'
-    });
-};
 
-(function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));

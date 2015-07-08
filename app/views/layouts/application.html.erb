@@ -4,7 +4,6 @@
   <title>Timeofmadness</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta property="og:url"                content="http://timeofmadnees.com" />
@@ -14,11 +13,13 @@
   <meta property="og:image"              content="http://timeofmadnees.com/assets/header-4b2a5ebcc7dae07b48c47465296f0ade76fe4ce1e037668a89d35a129c41cc3f.png" />
 </head>
 <body>
-<div id="fb-root"></div>
+
 
 <%= yield %>
 
-
+<script>
+    $(".adsbygoogle").each(function () { (adsbygoogle = window.adsbygoogle || []).push({}); });
+</script>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>

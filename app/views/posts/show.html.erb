@@ -1,5 +1,5 @@
 <%= render "layouts/nav_blog_perfil" %>
-<%= render "layouts/facechat" %>
+
 
 <div class="container-fluid">
   <div class="row">
@@ -40,7 +40,12 @@
           </div>
         </div>
         <div class="col-md-12">
-          <div class="fb-like" data-href="http://timeofmadnees.com/posts/<%= @post.id %>" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
+          <div
+          class="fb-like"
+          data-share="true"
+          data-width="450"
+          data-show-faces="true">
+          </div>
         </div>
         <div class="col-md-12">
           <div class="fb-comments" data-href="https://www.facebook.com/timeofmadnessblog/post/<%= @post.id %>" data-numposts="5"></div>

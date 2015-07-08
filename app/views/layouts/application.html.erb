@@ -18,7 +18,10 @@
 <%= yield %>
 
 <script>
-    $(".adsbygoogle").each(function () { (adsbygoogle = window.adsbygoogle || []).push({}); });
+    //$(".adsbygoogle").each(function () { (adsbygoogle = window.adsbygoogle || []).push({}); });
+    [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    });
 </script>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

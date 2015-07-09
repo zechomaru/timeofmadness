@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timeofmadness</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+  <meta property="og:url"                content="http://timeofmadnees.com" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="<%= @post.title %>" />
+  <meta property="og:description"        content="http://timeofmadnees.com/posts/<%= @post.id %>" />
+  <meta property="og:image"              content="http://timeofmadnees.com/posts/<%= @post.id %>" />
+</head>
+<body>
+
+<%= yield %>
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<script>
+    //$(".adsbygoogle").each(function () { (adsbygoogle = window.adsbygoogle || []).push({}); });
+    [].forEach.call(document.querySelectorAll('.adsbygoogle'), function(){
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+</script>
+</body>
+</html>

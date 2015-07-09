@@ -65,7 +65,7 @@
           <% @aleatorio.each do |a| %>
           <div class="col-md-3 post_rand">
             <div class="row text_center">
-              <%= image_tag a.picture.url(:thumb) %>
+              <a href="<%= post_path(a) %>"><%= image_tag a.picture.url(:thumb) %></a>
               <div class="col-md-12">
                 <h5>
                   <%= a.title %>

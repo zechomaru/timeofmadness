@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  layout "post", :only => :show
   before_action :authenticate_bloguer!, :except => [:show]
   impressionist actions: [:show]
 

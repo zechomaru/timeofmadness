@@ -10,4 +10,25 @@ class BloguersController < ApplicationController
     @bloguers = Bloguer.all
   end
 
+  def edit
+    @bloguer = Bloguer.find(params[:id])
+  end
+
+  def update
+    @bloguer = Bloguer.find(params[:id])
+    if @bloguer.update(bloguer_params)
+      redirect_to(@bloguer)
+    else
+
+    end
+  end
+
+  private
+  def bloguer_params
+    params.require(:bloguer).permit(:name, :lastname, :avatar, :text, :facebook , :twitter, :instagram, :youtube)
+  end
+
 end
+
+
+

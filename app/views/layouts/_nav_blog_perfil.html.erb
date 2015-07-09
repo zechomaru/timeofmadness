@@ -10,9 +10,18 @@
               <li>
                 <%= link_to('Logout', destroy_bloguer_session_path, :method => :delete) %>
               </li>
+              <li>
+                <%= link_to('Perfil', perfil_path(current_bloguer))%>
+              </li>
+              <li>
+                <%= link_to('Mis Posts', posts_path) %>
+              </li>
           <% else %>
               <li>
                 <%= link_to('Login', new_bloguer_session_path)  %>
+              </li>
+              <li>
+                <%= link_to("Quieres ser un Bloguer?", getting_path) %>
               </li>
           <% end %>
         </ul>

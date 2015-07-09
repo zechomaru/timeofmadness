@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_bloguer!, :except => [:show]
+  impressionist actions: [:show]
 
   def index
     bloguer = current_bloguer.id
@@ -29,6 +30,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    impressionist(@post)
+    @post.impressionist_count
+    @aleatorio = Post.order("RANDOM()").limit(4)
   end
 
   def edit
@@ -54,6 +58,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :body, :bloguer_id, :view, :picture)
+    params.require(:post).permit(:title, :body, :bloguer_id, :view, :picture, :bootsy_image_gallery_id)
   end
 end

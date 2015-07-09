@@ -40,8 +40,10 @@
       <!-- content -->
       <div class="row">
         <div class="col-md-12">
-          <div class="froala-view">
+          <div class="row">
             <h1><%= @post.title %></h1>
+          </div>
+          <div class="row" style="margin-bottom: 100px">
             <div
             class="fb-like"
             data-share="true"
@@ -49,6 +51,8 @@
             data-show-faces="true">
             </div>
             <%= image_tag @post.picture.url(:medium)%>
+          </div>
+          <div class="froala-view">
             <%if @post.body.blank? %>
                 <%else%>
                 <% str=@post.body %>
@@ -56,6 +60,23 @@
             <%end%>
           </div>
         </div>
+        <!--post aleatorios -->
+        <div class="row">
+          <% @aleatorio.each do |a| %>
+          <div class="col-md-3 post_rand">
+            <div class="row text_center">
+              <%= image_tag a.picture.url(:thumb) %>
+              <div class="col-md-12">
+                <h5>
+                  <%= a.title %>
+                </h5>
+              </div>
+            </div>
+          </div>
+          <%end%>
+        </div>
+
+        <!-- end post -->
         <div class="col-md-12">
           <div
           class="fb-like"
@@ -87,20 +108,7 @@
   </div>
 </div>
 
-<div class="container-fluid footer">
-  <footer>
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-
-      </div>
-      <div class="col-md-12 text_center">
-        <h4>Time of Madness</h4>
-      </div>
-    </div>
-  </footer>
-</div>
+<%= render "layouts/footer" %>
 
 
 

@@ -20,19 +20,12 @@
   font-weight: bold;
   font-size: 15px;
 }
-.froala-wrapper{
-  min-height: 500px;
-  height: auto;
-}
-.froala-view{
-  min-height: 500px;
-  height: auto;
 
-}
 .post_title{
   width: 100%;
-  margin-bottom: 30px;
-  height: 30px;
+  margin-bottom: 30px !important;
+  height: 40px !important;
+  border: solid 1px black !important;
 }
 
 /* home post*/
@@ -82,4 +75,9 @@
 /*image post preview*/
 .bootstrap-filestyle{
   display: inline-block;
+}
+
+.wysihtml5-sandbox{
+  height: 700px !important;
+  border: solid 1px black !important;
 }

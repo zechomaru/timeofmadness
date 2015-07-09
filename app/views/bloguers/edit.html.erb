@@ -1,0 +1,95 @@
+<%= render 'layouts/nav_blog_perfil' %>
+
+<div class="container">
+  <%= form_for @bloguer, url: {action: "edit"}, html: { method: :put, multipart: true } do |f| %>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-md-12">
+          <%= image_tag @bloguer.avatar.url(:thumb), class: "avatar", id: "preview_post" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-1">
+          <%= f.file_field :avatar, id: "pImage", class:"filestyle", style: "width: 90%;" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <%= f.label :Nombre %>
+      </div>
+        <%= f.text_field :name, class: "perfil_edit_imput" %>
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <%= f.label :Apellido %>
+      </div>
+      <%= f.text_field :lastname, class: "perfil_edit_imput" %>
+    </div>
+  </div>
+
+      <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <%= f.label :Twitter %>
+          </div>
+          <div class="col-md-12">
+            <%= f.text_field :twitter, class: "perfil_edit_imput" %>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="row">
+            <%= f.label :Youtube %>
+          </div>
+          <div class="col-md-12">
+            <%= f.text_field :youtube, class: "perfil_edit_imput" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <%= f.label :Instagram %>
+          </div>
+          <div class="col-md-12">
+            <%= f.text_field :instagram, class: "perfil_edit_imput" %>
+          </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="row">
+              <%= f.label :Facebook %>
+            </div>
+            <div class="col-md-12">
+              <%= f.text_field :facebook, class: "perfil_edit_imput" %>
+            </div>
+          </div>
+        </div>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-3">
+          <div class="row">
+            <h3>Mensaje de mi Blog</h3>
+          </div>
+          <div class="col-md-12">
+            <%= f.text_area :text, class: "perfil_edit_imput", style: "  width: 660px; height: 100px;" %>
+          </div>
+        </div>
+      </div>
+        <div class="row" style="margin-top: 30px">
+          <div class="col-md-4 col-md-offset-6">
+            <%= f.submit "Update", class: "btn btn-primary" %>
+          </div>
+        </div>
+
+  <% end %>
+</div>

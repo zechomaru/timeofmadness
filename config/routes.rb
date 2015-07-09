@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   get 'getting/index'
 
   devise_for :bloguers, controllers: {sessions: 'bloguers/sessions', registrations: 'bloguers/registrations'}
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'quieres-ser-un-bloguer', to: 'getting#index', as: 'getting'
   get 'bloguers/:id', to: 'bloguers#show', as: 'bloguer'
+  get 'bloguer/:id', to: 'bloguers#edit', as: 'perfil'
+  put 'bloguer/:id', to: 'bloguers#update'
   get 'bloguers', to: 'bloguers#index'
   post 'posts/new', to: 'posts#image'
   #get 'post/:id' => 'posts#new'

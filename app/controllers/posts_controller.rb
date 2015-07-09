@@ -32,7 +32,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     impressionist(@post)
     @post.impressionist_count
-    @aleatorio = Post.order("RANDOM()").limit(4)
+    #develoment
+    #@aleatorio = Post.order("RANDOM()").limit(4)
+    #production
+    @aleatorio = Post.limit(5).order("RAND()")
   end
 
   def edit

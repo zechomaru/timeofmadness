@@ -34,9 +34,9 @@ class PostsController < ApplicationController
     impressionist(@post)
     @post.impressionist_count
     #develoment
-    @aleatorio = Post.order("RANDOM()").limit(4)
+    #@aleatorio = Post.order("RANDOM()").limit(4)
     #production
-    #@aleatorio = Post.limit(5).order("RAND()")
+    @aleatorio = Post.limit(5).order("RAND()")
   end
 
   def edit

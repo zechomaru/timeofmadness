@@ -10,10 +10,11 @@
   height: 100px !important;
   border-radius: 50%;
   margin-bottom: 10px;
-  transition:0.5s all;
+  transition:1s all;
 }
 .home_perfil:hover{
-  width: 110px;
+  transform: perspective(300px) rotateY(-180deg);
+  transform-origin: 50% 50%;
 }
 
 /*end home perfil bloguers*/

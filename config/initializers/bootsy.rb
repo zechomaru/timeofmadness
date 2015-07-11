@@ -4,7 +4,7 @@ Bootsy.setup do |config|
   #   You can also override them locally by passing an
   #   editor_options hash to bootsy_area
    config.editor_options = {
-  #   font_styles: true,
+     font_styles: true,
      emphasis: true,
      lists: true,
      html: true,

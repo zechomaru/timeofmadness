@@ -8,10 +8,11 @@
             <nav>
               <ul>
                 <li>
+
                   <%= link_to content_tag(:i, " Dashboard", class: 'fa fa-eye'), posts_path %>
                 </li>
                 <li>
-                  <%= link_to content_tag(:i, " New Post", class: 'fa fa-eye'), new_post_path %>
+                  <%= link_to "new post", new_post_path, :target => "_blank" %>
                 </li>
               </ul>
             </nav>

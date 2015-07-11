@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'bloguer/:id', to: 'bloguers#edit', as: 'perfil'
   put 'bloguer/:id', to: 'bloguers#update'
   get 'bloguers', to: 'bloguers#index'
-  post 'posts/new', to: 'posts#image'
+  #post 'posts/new', to: 'posts#image'
   #get 'post/:id' => 'posts#new'
   resources :posts
   #resources :bloguers

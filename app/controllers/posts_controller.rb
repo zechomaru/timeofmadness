@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  layout "post", :only => :show
   before_action :authenticate_bloguer!, :except => [:show]
   impressionist actions: [:show]
+  layout "post", :only => :show
 
   def index
     bloguer = current_bloguer.id
@@ -34,9 +34,9 @@ class PostsController < ApplicationController
     impressionist(@post)
     @post.impressionist_count
     #develoment
-    #@aleatorio = Post.order("RANDOM()").limit(4)
+    @aleatorio = Post.order("RANDOM()").limit(4)
     #production
-    @aleatorio = Post.limit(5).order("RAND()")
+    #@aleatorio = Post.limit(5).order("RAND()")
   end
 
   def edit

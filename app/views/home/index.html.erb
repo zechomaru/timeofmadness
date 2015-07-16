@@ -1,9 +1,9 @@
 <div class="container-fluid home_head">
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-2 col-sm-2 col-xs-2">
       <%= image_tag("logo.png", class: "logo") %>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-6 col-xs-6">
       <nav class="nav_home">
         <ul>
           <% if bloguer_signed_in? %>
@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="row text_white">
-    <div class="col-md-6 text_main text_center">
+    <div class="col-md-6 text_main text_center col-sm-6 col-xs-6">
       <strong class="t1 tfw">
         A
         </strong>
@@ -51,7 +51,7 @@
 <!-- posts container -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-2 col-sm-2 col-xs-2">
       <!--publicidad  -->
       <!-- home lateral der new -->
       <ins class="adsbygoogle"
@@ -61,7 +61,7 @@
            data-ad-format="auto"></ins>
 
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 col-sm-8 col-xs-8">
       <div class="row">
         <!--  bloguers -->
         <h2 class="text_orange">
@@ -71,7 +71,7 @@
         <!--perfil bloguer  -->
         <div class="row text_center" style="height: 160px">
           <% @bloguers.each do |bloguer| %>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-3 col-xs-3">
           <div class="row">
             <% if bloguer.avatar_file_name == nil %>
                 <a href="<%= bloguer_path(bloguer) %>"><%= image_tag("perfil.jpg", class: "home_perfil") %></a>
@@ -82,12 +82,12 @@
 
               <h4><%= bloguer.name %> <%= bloguer.lastname %></h4>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6 col-xs-6">
               <strong>
 
               </strong>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6 col-xs-6">
               <strong>
                 <% %>
               </strong>
@@ -95,9 +95,9 @@
           </div>
         </div>
         <%end%>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-3 col-xs-3">
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 col-sm-12 col-xs-12">
                 <a class="bloguer_view" href="<%= bloguers_path %>"><i class="fa fa-plus-circle"></i></a>
               </div>
             </div>
@@ -114,17 +114,17 @@
         <div class="under_blue"></div>
         <div class="row text_center">
           <% @posts.each do |post| %>
-        <div class="col-md-3 col-md-offset-1 post" style="margin-bottom: 20px">
+        <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 post" style="margin-bottom: 20px">
           <div class="home_before_img"></div>
           <a href="<%= post_path(post) %>"><%= image_tag post.picture.url(:medium), class: "home_post_img" %></a>
           <div class="row">
             <h3>
               <%= post.title %>
             </h3>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6 col-xs-6">
 
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6 col-xs-6">
               <strong>
                 <%= post.impressionist_count %> <i class="fa fa-eye"></i>
               </strong>
@@ -135,7 +135,7 @@
       </div>
       </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-2 col-sm-2 col-xs-2">
       <!-- publicidad -->
       <!-- home lateral der new -->
       <ins class="adsbygoogle"
